@@ -57,7 +57,13 @@ RUN /opt/buildkit/bin/civibuild download "test-build" --civi-ver "master" --type
 RUN service mysql start && /opt/buildkit/bin/civibuild install "test-build" --url "http://localhost:8000" --admin-pass "admin"
 RUN chmod -R 777 /opt/buildkit/build/test-build/sites/default/files/
 
+# for PHPStorm PHPUnit
+RUN ln /opt/buildkit/bin/phpunit4 /opt/buildkit/bin/phpunit4.phar
+ADD civitest /usr/bin
+RUN chmod +x /usr/bin/civitest
+
 ENV TERM xterm
+ENV PATH "/opt/buildkit/bin:$PATH"
 
 EXPOSE 80 3306
 

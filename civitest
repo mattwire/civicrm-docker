@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+service mysql start;
+export CIVICRM_UF=UnitTests;
+
+cd /opt/buildkit/build/test-build/sites/all/modules/civicrm/ && phpunit4 $@
