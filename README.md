@@ -1,5 +1,17 @@
 ## Usage
 
+#### Login Details
+
+You won't need them right away, but I'll put them at the top since if you get 
+it running it's probably why you're here :-)
+
+```
+username: admin  
+password: admin
+```
+
+You can change the password in the `civibuild` command in the Dockerfile.
+
 #### Building
 
 Clone this repo locally using
