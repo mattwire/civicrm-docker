@@ -64,6 +64,8 @@ RUN chmod +x /usr/bin/civitest
 
 ENV TERM xterm
 ENV PATH "/opt/buildkit/bin:$PATH"
+ENV BUILD_ROOT "/opt/buildkit/build/test-build"
+ENV EXTENSION_DIR "${BUILD_ROOT}/sites/all/modules/civicrm/tools/extensions"
 
 EXPOSE 80 3306
 
