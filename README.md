@@ -48,6 +48,14 @@ docker run -v $PWD:/var/www/civicrm -p 8000:8000 civicrm-test
 The entrypoint script will detect that something is mounted at 
 `/var/www/civicrm` and replace the CiviCRM core code with this.
 
+## Extensions
+
+#### Using Local Extensions
+
+If you want to use certain local extensions then you can mount them to
+`/var/www/extensions` in the contain. The entrypoint script will find and
+auto-enable any extensions in this directory.
+
 ## Testing
 
 #### Running The Tests
